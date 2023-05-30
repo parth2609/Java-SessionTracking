@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <servlet>
+        <servlet-name>CookieExample</servlet-name>
+        <servlet-class>CookieExample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VisitorCount</servlet-name>
+        <servlet-class>VisitorCount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConfigExample</servlet-name>
+        <servlet-class>ConfigExample</servlet-class>
+        <init-param>
+        <param-name>Driver</param-name>
+        <param-value>com.oracle.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+        <param-name>path</param-name>
+        <param-value>localhost:8080/student</param-value>
+    </init-param>
+    <init-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </init-param>
+    <init-param>
+        <param-name>password</param-name>
+        <param-value>root</param-value>
+    </init-param>
+    <servlet>
+        <servlet-mapping>
+        <servlet-name>CookieExample</servlet-name>
+        <url-pattern>/CookieExample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisitorCount</servlet-name>
+        <url-pattern>/VisitorCount</url-pattern>
+    </servlet-mapping>
+    </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfigExample</servlet-name>
+        <url-pattern>/ConfigExample</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
